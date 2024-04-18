@@ -30,7 +30,7 @@ export default function Navbar() {
     };
 
     checkAuthStatus();
-  }, []);
+  }, [supabase.auth]);
 
   const handleAuthAction = async () => {
     if (isLoggedIn) {
