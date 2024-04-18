@@ -3,7 +3,6 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
@@ -19,6 +18,25 @@ function classNames(...classes: string[]) {
 export default function Navbar() {
   const supabase = createClientComponentClient();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
 
   useEffect(() => {
     const checkAuthStatus = async () => {
@@ -31,7 +49,7 @@ export default function Navbar() {
     };
 
     checkAuthStatus();
-  }, []);
+  }, [supabase.auth]);
 
   const handleAuthAction = async () => {
     if (isLoggedIn) {
@@ -48,10 +66,10 @@ export default function Navbar() {
   };
 
   return (
-    <Disclosure as="nav" className="bg-gray-900">
+    <Disclosure as="nav"  className={`bg-gray-900 ${isSticky ? 'fixed top-0 left-0 w-full bg-opacity-75 backdrop-filter backdrop-blur-lg' : ''}`}>
     {({ open }) => (
       <>
-        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -87,7 +105,7 @@ export default function Navbar() {
               </div>
             </div>
             <div className="hidden sm:ml-6 sm:block">
-              <button className="w-40 h-10 gap-0 focus:outline-none text-black bg-yellow-500 rounded-lg py-2 transition duration-150 ease-in" onClick={handleAuthAction}>
+              <button className="w-40 h-10 gap-0 focus:outline-none text-black bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 transition duration-150 ease-in" onClick={handleAuthAction}>
                 {isLoggedIn ? 'Cerrar sesión' : 'Iniciar sesión'}
               </button>
               {/* {isLoggedIn && (
@@ -112,7 +130,7 @@ export default function Navbar() {
                 {item.name}
               </Disclosure.Button>
             ))}
-            <button className="w-full mt-4 focus:outline-none text-black bg-yellow-500 rounded-lg py-2 transition duration-150 ease-in" onClick={handleAuthAction}>
+            <button className="w-full mt-4 focus:outline-none text-black bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 transition duration-150 ease-in" onClick={handleAuthAction}>
               {isLoggedIn ? 'Cerrar sesión' : 'Iniciar sesión'}
             </button>
             {/* {isLoggedIn && (
