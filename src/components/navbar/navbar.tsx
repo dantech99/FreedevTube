@@ -3,12 +3,13 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const navigation = [
-  { name: 'Home', href: '', current: true },
+  { name: 'Home', href: '#', current: true },
   { name: 'Cursos', href: '#', current: false },
   { name: 'Creadores', href: '#', current: false },
-  { name: 'About', href: '/', current: false },
+  { name: 'About', href: '#', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -30,7 +31,7 @@ export default function Navbar() {
     };
 
     checkAuthStatus();
-  }, [supabase.auth]);
+  }, []);
 
   const handleAuthAction = async () => {
     if (isLoggedIn) {
@@ -103,7 +104,7 @@ export default function Navbar() {
                 as="a"
                 href={item.href}
                 className={classNames(
-                  item.href  ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                  item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                   'block rounded-md px-3 py-2 text-base font-medium'
                 )}
                 aria-current={item.current ? 'page' : undefined}
@@ -122,5 +123,6 @@ export default function Navbar() {
       </>
     )}
   </Disclosure>
-  )
+);
+  
 }
