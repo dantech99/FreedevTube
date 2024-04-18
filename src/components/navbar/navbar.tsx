@@ -68,7 +68,10 @@ export default function Navbar() {
                 <div className="flex flex-shrink-0 items-center">
                   <span className="font-bold">Freedev<a className="text-yellow-500">Tube</a></span>
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
+              
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="hidden sm:ml-6 sm:block mr-2">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
@@ -85,8 +88,6 @@ export default function Navbar() {
                     ))}
                   </div>
                 </div>
-              </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button className="w-40 h-10 gap-0 focus:outline-none text-black bg-yellow-500 rounded-lg py-2 transition duration-150 ease-in" onClick={handleAuthAction}>
                   {isLoggedIn ? 'Cerrar sesión' : 'Iniciar sesión'}
                 </button>
