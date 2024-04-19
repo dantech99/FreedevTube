@@ -1,5 +1,5 @@
-import DiscoverPage from '@/components/discover';
-import JumbotronSection from '@/components/jumbrotron';
+import DiscoverPage from '@/components/home/discover';
+import JumbotronSection from '@/components/home/jumbrotron';
 export default function Home() {
   return (
     <>

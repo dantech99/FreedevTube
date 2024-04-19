@@ -35,7 +35,7 @@ export default function DiscoverPage() {
             <>
               <div className="place-self-start lg:col-span-7 lg:mr-40 lg:mb-10 flex justify-center flex-col">
                 <div>
-                  <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
+                  <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-6xl text-white">
                     Descubre y Encuentra
                   </h1>
                   <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">

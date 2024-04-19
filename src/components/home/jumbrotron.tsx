@@ -1,11 +1,15 @@
+import Carrousel from "./carrousel";
+
 export default function JumbotronSection() {
   return (
-    <section className="flex justify-between max-w-screen-xl px-4 py-8 mx-auto  lg:py-16 ">
+    <section className="flex justify-between max-w-screen-xl px-4 py-4 mx-auto h-80 gap-4 ">
       {/* container text  */}
-      <div className="flex flex-col ">
-        <h1 className="text-4xl">Aprende Todo En Un Solo Lugar</h1>
+      <div className="flex flex-col w-1/2 ">
+        <h1 className="text-4xl md:text-4xl xl:text-6xl font-extrabold">
+          Aprende Todo En Un Solo Lugar
+        </h1>
 
-        <h3>
+        <h3 className="mt-4 text-2xl">
           Descubre, aprende y apoya, todo en un solo lugar Ya sea que estes
           empezando o llevas tiempo este sitio es para ti
         </h3>
@@ -18,7 +22,9 @@ export default function JumbotronSection() {
       </div>
 
       {/* container carrousel */}
-      <div className="flex"></div>
+      <div className="flex w-1/2">
+        <Carrousel />
+      </div>
     </section>
   );
 }
