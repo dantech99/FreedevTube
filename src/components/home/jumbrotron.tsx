@@ -1,8 +1,9 @@
-import Carrousel from "./carrousel";
+import Carrousel from './carrousel';
+import Button from '../button/button-primary';
 
 export default function JumbotronSection() {
   return (
-    <section className="flex justify-between max-w-screen-xl px-4 py-4 mx-auto max-h-96 gap-4 ">
+    <section className="flex justify-between items-center max-w-screen-xl px-4 mx-auto h-[450px] gap-4 ">
       {/* container text  */}
       <div className="flex flex-col w-auto ">
         <h1 className="text-4xl md:text-4xl xl:text-6xl font-extrabold">
@@ -14,11 +15,10 @@ export default function JumbotronSection() {
           empezando o llevas tiempo este sitio es para ti
         </h3>
 
-        <h4>De la comunidad para la comunidad</h4>
 
-        <a href="/" className="">
-          Empezar
-        </a>
+        <div className='mt-4'>
+          <Button title='empezar' />
+        </div>
       </div>
 
       {/* container carrousel */}
