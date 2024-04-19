@@ -8,7 +8,7 @@ export default function Home() {
       {/* jumbrotron */}
       <JumbotronSection />
       <DiscoverPage />
-       <ResourceCard />
+      <ResourceCard />
       </>
   );
 }

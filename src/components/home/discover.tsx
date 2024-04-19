@@ -69,9 +69,9 @@ export default function DiscoverPage() {
                 />
               </div>
 
-              <div className="place-self-end lg:col-span-7 lg:mr-40 lg:mb-10 flex justify-end flex-col">
-                <div>
-                  <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl text-white">
+              <div className="place-self-end lg:col-span-7 lg:mr-40 lg:mb-10 flex justify-end flex-col ">
+                <div className="flex flex-col justify-end items-end text-end">
+                  <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl text-white text-balance">
                   {section.title}
                   </h1>
                   <p className="max-w-2xl mb-6 font-light text-[#FBFBFB] lg:mb-8 md:text-lg lg:text-xl">
@@ -79,7 +79,7 @@ export default function DiscoverPage() {
                   </p>
                 </div>
 
-                <div>
+                <div className="flex justify-end">
                 <Button title="Explorar" />
                 </div>
               </div>
