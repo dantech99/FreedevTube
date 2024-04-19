@@ -1,9 +1,10 @@
 import Carrousel from './carrousel';
 import Button from '../button/button-primary';
 
+
 export default function JumbotronSection() {
   return (
-    <section className="flex justify-between items-center max-w-screen-xl px-4 mx-auto h-[450px] gap-4 ">
+    <section className="flex justify-between items-center max-w-screen-xl px-4 mx-auto h-[450px] gap-4  ">
       {/* container text  */}
       <div className="flex flex-col w-auto ">
         <h1 className="text-4xl md:text-4xl xl:text-6xl font-extrabold">

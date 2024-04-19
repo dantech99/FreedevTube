@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='bg-gradient-to-b from-gray-900 to-zinc-900 '>
+        <div className='bg-gradient '>
 
         {/* Layout UI */}
 
