@@ -1,6 +1,7 @@
 import DiscoverPage from '@/components/home/discover';
 import JumbotronSection from '@/components/home/jumbrotron';
 import ResourceCard from '@/components/home/cardSources';
+import Tecnology from '@/components/home/tecnology';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       {/* jumbrotron */}
       <JumbotronSection />
       <DiscoverPage />
+      <Tecnology />
       <ResourceCard />
       </>
   );
