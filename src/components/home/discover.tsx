@@ -77,7 +77,7 @@ export default function DiscoverPage() {
               <div className="hidden lg:block lg:col-span-5 ">
                 <img
                   className="w-96 lg:w-719px h-auto py-0 px-39px rounded-xl"
-                  src="/undraw_Online_media.png"
+                  src="/undraw_Engineering_team.png"
                   alt="mockup"
                 />
               </div>
@@ -85,12 +85,10 @@ export default function DiscoverPage() {
               <div className="place-self-end lg:col-span-7 lg:mr-40 lg:mb-10 flex justify-end flex-col">
                 <div>
                   <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
-                    Descubre y Encuentra
+                    Aprende y Comparte
                   </h1>
                   <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
-                    A tus streamers, Youtubers y creadores de contenido favorito
-                    en un solo lugar, enterate de quién está aportando valor a
-                    la comunidad hispanohablante
+                  Explorar los mejores cursos dictados por los mejores creadores de contenido, explora un sin numero de recursos y comparte con otros lo aprendido.
                   </p>
                 </div>
 
@@ -98,7 +96,7 @@ export default function DiscoverPage() {
                   <a
                     href="#"
                     className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-black rounded-lg bg-yellow-500 hover:bg-yellow-700 focus:ring-4 focus:ring-blue-300">
-                    Descubrir
+                    Explorar
                     <svg
                       className="w-5 h-5 ml-2 -mr-1"
                       fill="currentColor"
