@@ -18,9 +18,9 @@ export default function DiscoverPage() {
     },
     {
       id: 2,
-      title: 'Descubre y Encuentra',
+      title: 'Aprende y Comparte',
       description:
-        'A tus streamers, Youtubers y creadores de contenido favorito en un solo lugar, enterate de quién está aportando valor a la comunidad hispanohablante',
+        'Explorar los mejores cursos dictados por los mejores creadores de contenido, explora un sin numero de recursos y comparte con otros lo aprendido.',
       link: '/',
       position: 'righ',
     },
@@ -35,13 +35,11 @@ export default function DiscoverPage() {
             <>
               <div className="place-self-start lg:col-span-7 lg:mr-40 lg:mb-10 flex justify-center flex-col">
                 <div>
-                  <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-6xl text-white">
-                    Descubre y Encuentra
+                  <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-4xl text-white">
+                    {section.title}
                   </h1>
-                  <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
-                    A tus streamers, Youtubers y creadores de contenido favorito
-                    en un solo lugar, enterate de quién está aportando valor a
-                    la comunidad hispanohablante
+                  <p className="max-w-2xl mb-6 font-light text-[#FBFBFB] lg:mb-8 md:text-lg lg:text-xl">
+                    {section.description}
                   </p>
                 </div>
 
@@ -84,11 +82,11 @@ export default function DiscoverPage() {
 
               <div className="place-self-end lg:col-span-7 lg:mr-40 lg:mb-10 flex justify-end flex-col">
                 <div>
-                  <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
-                    Aprende y Comparte
+                  <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl text-white">
+                  {section.title}
                   </h1>
-                  <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
-                  Explorar los mejores cursos dictados por los mejores creadores de contenido, explora un sin numero de recursos y comparte con otros lo aprendido.
+                  <p className="max-w-2xl mb-6 font-light text-[#FBFBFB] lg:mb-8 md:text-lg lg:text-xl">
+                  {section.description}
                   </p>
                 </div>
 

@@ -41,32 +41,107 @@ export default function Carrousel() {
       alt: 'slider',
       image: '/midudev.jpeg'
     },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+
+
+
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
   
   ]
+
+
 
   return (
     <div className={styles.slider}>
     <div className={styles.slidetrack}>
-      {carrouselItems.map(({alt, image}) => (
+      <div className='grid grid-cols-12 gap-2'>
+        {carrouselItems.map(({alt, image}) => (
       <div className={styles.slide} key={alt}>
         <img src={image} height="100" width="250" alt="" />
       </div>  
       ))}
+      </div>
+      
     </div>
-
-
-
-
-    <div className={styles.slidetrack}>
-    {carrouselItems.map(({alt, image}) => (
-      <div className={styles.slide} key={alt}>
-        <img src={image} height="100" width="250" alt="" />
-      </div>  
-      ))}
-    </div>
-    </div>
-  )
+  </div>
     
-
-  
+  )
 }

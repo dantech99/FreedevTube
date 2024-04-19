@@ -2,9 +2,9 @@ import Carrousel from "./carrousel";
 
 export default function JumbotronSection() {
   return (
-    <section className="flex justify-between max-w-screen-xl px-4 py-4 mx-auto h-80 gap-4 ">
+    <section className="flex justify-between max-w-screen-xl px-4 py-4 mx-auto max-h-96 gap-4 ">
       {/* container text  */}
-      <div className="flex flex-col w-1/2 ">
+      <div className="flex flex-col w-auto ">
         <h1 className="text-4xl md:text-4xl xl:text-6xl font-extrabold">
           Aprende Todo En Un Solo Lugar
         </h1>
@@ -22,7 +22,7 @@ export default function JumbotronSection() {
       </div>
 
       {/* container carrousel */}
-      <div className="flex w-1/2">
+      <div className=" w-1/2 md:flex hidden">
         <Carrousel />
       </div>
     </section>
