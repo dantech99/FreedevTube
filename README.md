@@ -1,4 +1,3 @@
-Por supuesto, aquí tienes un ejemplo de un README.md para el proyecto FreedevTube:
 
 ---
 
