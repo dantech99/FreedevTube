@@ -19,12 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='bg-gradient-to-b from-gray-900 to-zinc-900'>
+        <div className='bg-gradient-to-b from-gray-900 to-zinc-900 '>
 
         {/* Layout UI */}
 
         {/* navbar  */}
+        <div className='border-b border-slate-950'>
+
         <Navbar />
+        </div>
         {/* main content  */}
         <main className='max-w-screen-xl px-4 py-8 mx-auto lg:py-16 '>{children}</main>
 
