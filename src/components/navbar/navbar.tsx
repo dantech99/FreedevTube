@@ -5,10 +5,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
+  { name: 'Home', href: '/', current: true },
   { name: 'Cursos', href: '#', current: false },
   { name: 'Creadores', href: '#', current: false },
-  { name: 'About', href: '#', current: false },
+  { name: 'About', href: '/about', current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -85,7 +85,7 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <span className="font-bold text-2xl">
-                    Freedev<a className="text-yellow-500">Tube</a>
+                  <a href="/">Freedev</a><a href='/' className="text-yellow-500">Tube</a>
                   </span>
                 </div>
               </div>
