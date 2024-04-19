@@ -17,7 +17,8 @@ export default function Footer() {
     >
       <span className="md:mr-2">creado con mucho 💚 por</span>
       <span className="text-yellow-600">
-            Watercubz & Dantech99
+            Watercubz Dantech99 &
+            AxolotlJ
       </span>
      </a>
      </nav>
