@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/navbar/navbar';
+import Footer from '@/components/footer/footer';
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "FreedevTube",
-  description: "en esta web podras encontrar los mejores cursos de programacion,hacking y diseño web",
+  title: 'FreedevTube',
+  description:
+    'en esta web podras encontrar los mejores cursos de programacion,hacking y diseño web',
 };
 
 export default function RootLayout({
@@ -16,7 +18,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='bg-gradient-to-b from-gray-900 to-zinc-900'>
+
+        {/* Layout UI */}
+
+        {/* navbar  */}
+        <Navbar />
+        {/* main content  */}
+        <main className='max-w-screen-xl px-4 py-8 mx-auto lg:py-16 '>{children}</main>
+
+        {/* footer  */}
+        <Footer />
+        
+        </div>
+
+
+      </body>
     </html>
   );
 }
