@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-primary: linear-gradient(180deg, rgba(32,21,58,1) 5%, rgba(4,1,13,1) 30%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +26,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.bg-gradient {
+  background:var(--background-primary) ;
+}
+
+.jumbotron {
+  background: var(--background-header);
+}
+
+
 
 @layer utilities {
   .text-balance {
