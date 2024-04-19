@@ -1,93 +1,61 @@
+import React from 'react';
+
+interface ResourceItemProps {
+  imgSrc: string;
+  title: string;
+  description: string;
+  url: string;
+}
+
 export default function ResourceCard() {
+  const resources = [
+    {
+      imgSrc: "/recourseTech.es.png",
+      title: "recursostech.dev",
+      description: "¿Hay streamers de programación? ¿Donde puedo deployar mi web? ¿Cómo configuro extensión, herramienta, etc",
+      url: "https://recursostech.dev"
+    },
+    {
+      imgSrc: "/resources.dev.png",
+      title: "devresource.es",
+      description: "Aquí encontrarás los mejores recursos para todo tipo de desarrolladores.",
+      url: "https://devresourc.es"
+    }
+  ];
+
   return (
-    <div className="p-4 lg:p-8">
+    <div className="p-4 lg:p-8 ">
       <h1 className="text-white text-3xl font-bold mb-8 text-center">
-        Descubre recursos Indispensables
+        Descubre recursos indispensables
       </h1>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-        <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none bg-white rounded-lg shadow dark:bg-gray-800 border border-gray-200">
-          <a>
-            <img
-              className="w-full h-auto rounded-t-lg"
-              src="/recourseTech.es.png"
-              alt=""
-            />
-          </a>
-          <div className="p-5">
-            <a href="https://recursostech.dev" target="_blank">
-              <h5 className="mb-2 text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-              recursostech.dev
-              </h5>
-            </a>
-            <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            ¿Hay streamers de programación? ¿Donde puedo deployar mi web?
-              ¿Cómo configuro extensión, herramienta, etc 
-            </p>
-            <a
-           href="https://www.recursostech.dev" target="_blank"
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Explorar
-              <svg
-                className="rtl:rotate-180 w-3.5 h-3.5 md:w-4 md:h-4 lg:w-5 lg:h-5 ms-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
+        {resources.map((resource, index) => (
+          <ResourceItem key={index} {...resource} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
-        <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none bg-white rounded-lg shadow dark:bg-gray-800 border border-gray-200">
-          <a href="#">
-            <img
-              className="w-full h-auto rounded-t-lg"
-              src="/resources.dev.png"
-              alt=""
-            />
-          </a>
-          <div className="p-5">
-            <a >
-              <h5 className="mb-2 text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-                devresource.es
-              </h5>
-            </a>
-            <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-              Aquí encontrarás los mejores recursos para todo tipo de
-              desarrolladores.
-            </p>
-            <a
-              href="https://devresourc.es" target="_blank"
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Explorar
-              <svg
-                className="rtl:rotate-180 w-3.5 h-3.5 md:w-4 md:h-4 lg:w-5 lg:h-5 ms-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
+function ResourceItem({ imgSrc, title, description, url }: ResourceItemProps) {
+  return (
+    <div className="max-w-xs sm:max-w-sm rounded-lg shadow border">
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <img className="w-full h-auto rounded-t-lg" src={imgSrc} alt={title} />
+      </a>
+      <div className="p-4">
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <h5 className="mb-2 text-xl font-bold text-white">{title}</h5>
+        </a>
+        <p className="mb-2 text-sm text-white">{description}</p>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-3 py-2 text-sm font-medium text-center text-black bg-yellow-400 rounded-lg hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-blue-300"
+        >
+          Explorar
+        </a>
       </div>
     </div>
   );
