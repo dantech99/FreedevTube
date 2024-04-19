@@ -29,7 +29,7 @@ export default function RootLayout({
         <Navbar />
         </div>
         {/* main content  */}
-        <main className='max-w-screen-xl px-4 py-8 mx-auto lg:py-16 '>{children}</main>
+        <main className='max-w-screen-xl px-4 py-8 mx-auto lg:py-5 '>{children}</main>
 
         {/* footer  */}
         <Footer />
