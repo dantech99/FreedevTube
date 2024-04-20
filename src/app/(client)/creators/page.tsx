@@ -1,11 +1,16 @@
-import ProtectedRoute from "@/components/protecteRoutes/page";
+'use client'
 
-export default function Creators() {
+
+export default function CreatorsPage() {
+  
   return (
-     <ProtectedRoute>
-          <div>
-               <h1>CREADORES</h1>
-          </div>
-     </ProtectedRoute>
-  )
-}
+        <div className="h-screen items-center text-center justify-center">
+          {/* Contenido para los creadores */}
+          <h1>¡Bienvenido, creador!</h1>
+        </div>    
+  );
+};
+
+
+
+
