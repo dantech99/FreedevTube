@@ -10,7 +10,7 @@ const About = () => {
                         <div className=" rounded-lg overflow-hidden shadow border">
                             <div className="p-4">
                                 <img src="/watercubz.dev.jpg" alt="Card 1" className="w-full rounded" />
-                               <a href="https://github.com/watercubz" target='_blank'><h2 className="text-xl font-bold mb-2">Watercubz</h2></a>
+                               <a href="https://github.com/watercubz" target='_blank'><h2 className="text-xl font-bold mb-2  hover:text-yellow-500">Watercubz</h2></a>
                                 <p className="text-white">Desarrollador Backend</p>
                             </div>
                         </div>
@@ -19,7 +19,7 @@ const About = () => {
                         <div className=" rounded-lg overflow-hidden shadow border">
                             <div className="p-4">
                                 <img src="/dantech.dev.png" alt="Card 2" className="w-full rounded" />
-                              <a href="https://github.com/dantech99" target='_blank'><h2 className="text-xl font-bold mb-2">Dantech99</h2></a>
+                              <a href="https://github.com/dantech99" target='_blank'><h2 className="text-xl font-bold mb-2  hover:text-yellow-500">Dantech99</h2></a>
                                 <p className="text-white">Desarrollador Frontend</p>
                             </div>
                         </div>
@@ -28,7 +28,7 @@ const About = () => {
                         <div className="shadow border rounded-lg overflow-hidden">
                             <div className="p-4">
                                 <img src="/axol.dev.jpg" alt="Card 3" className="w-full rounded" />
-                               <a href="https://github.com/ AxolotlJ.dev" target='_blank'> <h2 className="text-xl font-bold mb-2">Axol</h2></a>
+                               <a href="https://github.com/AxolotlJ-Dev" target='_blank'> <h2 className="text-xl font-bold mb-2  hover:text-yellow-500">Axol</h2></a>
                                 <p className="text-white">Desarrollador Frontend</p>
                             </div>
                         </div>
