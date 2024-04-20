@@ -24,11 +24,11 @@ export default function ResourceCard() {
       url: 'https://devresourc.es',
     },
     {
-      imgSrc: '/resources.dev.png',
-      title: 'devresource.es',
+      imgSrc: '/freeset2.jpeg',
+      title: 'Freesets',
       description:
-        'Aquí encontrarás los mejores recursos para todo tipo de desarrolladores.',
-      url: 'https://devresourc.es',
+        'Collection of free resources like icons, images, illustrations, components, libraries and more!',
+      url: 'https://freesets.vercel.app',
     },
   ];
 
