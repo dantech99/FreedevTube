@@ -1,27 +1,23 @@
-'use client'
-
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+"use client";
+import { useEffect, useState } from "react";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { AuthButton } from "../home/auth-button-client";
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Cursos', href: '/courses', current: false },
-  { name: 'Creadores', href: '/creators', current: false },
-  { name: 'About', href: '/about', current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "Cursos", href: "/courses", current: false },
+  { name: "Creadores", href: "/creators", current: false },
+  { name: "About", href: "/about", current: false },
 ];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
-  const router = useRouter()
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+function Navbar() {
+
   const [isSticky, setIsSticky] = useState(false);
-  const supabase = createClientComponentClient();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,47 +28,22 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  useEffect(() => {
-    const checkAuthStatus = async () => {
-      const { data, error } = await supabase.auth.getSession();
-      if (error || !data || !data.session || !data.session.user) {
-        setIsLoggedIn(false);
-       
-      } else {
-        setIsLoggedIn(true);
-      }
-    };
 
-    checkAuthStatus();
-  }, [router, supabase.auth]);
-
-  const handleAuthAction = async () => {
-    if (isLoggedIn) {
-      await supabase.auth.signOut();
-      setIsLoggedIn(false);
-    
-    } else {
-      await supabase.auth.signInWithOAuth({
-        provider: 'github',
-        options: {
-          redirectTo: 'http://localhost:3000/auth/callback',
-        },
-      });
-    }
-  };
 
   return (
     <Disclosure
       as="nav"
       className={`bg-gray-900 ${
-        isSticky ? 'fixed top-0 left-0 w-full bg-opacity-75 backdrop-filter backdrop-blur-lg z-10' : ''
+        isSticky
+          ? "fixed top-0 left-0 w-full bg-opacity-75 backdrop-filter backdrop-blur-lg z-10"
+          : ""
       }`}
     >
       {({ open }) => (
@@ -110,23 +81,24 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          "rounded-md px-3 py-2 text-sm font-medium"
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </a>
                     ))}
                   </div>
                 </div>
-                <button
+                {/* <button
                   className="hidden md:block w-40 h-10 gap-0 focus:outline-none text-black bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 transition duration-150 ease-in"
                   onClick={handleAuthAction}
-                >
-                  {isLoggedIn ? 'Cerrar sesión' : 'Iniciar sesión'}
-                </button>
+                  >
+                  
+                </button> */}
+                <AuthButton session={null} />
               </div>
             </div>
           </div>
@@ -138,20 +110,19 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <button
-                className="w-full mt-4 focus:outline-none text-black bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 transition duration-150 ease-in"
-                onClick={handleAuthAction}
-              >
-                {isLoggedIn ? 'Cerrar sesión' : 'Iniciar sesión'}
-              </button>
+            <div>
+            <AuthButton session={null} />
+            </div>
             </div>
           </Disclosure.Panel>
         </>
@@ -159,3 +130,5 @@ export default function Navbar() {
     </Disclosure>
   );
 }
+
+export default Navbar; // Aplicamos el HOC a nuestro componente Navbar
