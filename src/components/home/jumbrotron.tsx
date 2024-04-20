@@ -18,7 +18,7 @@ export default function JumbotronSection() {
 
 
         <div className='mt-4'>
-          <Button title='empezar' />
+          <Button title='empezar' path='/courses' />
         </div>
       </div>
 

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { AuthButton } from "../home/auth-button-client";
+
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -98,7 +98,7 @@ function Navbar() {
                   >
                   
                 </button> */}
-                <AuthButton session={null} />
+                {/* <AuthButtonServer /> */}
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ function Navbar() {
                 </Disclosure.Button>
               ))}
             <div>
-            <AuthButton session={null} />
+            {/* <AuthButtonServer  /> */}
             </div>
             </div>
           </Disclosure.Panel>
