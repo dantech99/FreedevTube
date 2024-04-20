@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Cursos', href: '#', current: false },
-  { name: 'Creadores', href: '#', current: false },
+  { name: 'Creadores', href: '/creators', current: false },
   { name: 'About', href: '/about', current: false },
 ];
 
@@ -63,6 +63,7 @@ export default function Navbar() {
       });
     }
   };
+
 
   return (
     <Disclosure
