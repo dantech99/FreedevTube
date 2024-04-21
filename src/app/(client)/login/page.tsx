@@ -1,4 +1,4 @@
-import { AuthButtonServer } from '@/components/navbar/auth-button-server';
+import { AuthButtonServer } from '@/app/components/auth-button-server';
 
 export default function Login() {
   return (
