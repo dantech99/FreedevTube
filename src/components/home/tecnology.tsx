@@ -6,6 +6,10 @@ export default function Tecnology() {
         <h3 className="text-white text-3xl font-bold ">Aprende totalmente gratis </h3>
         <h3 className="text-white text-3xl font-bold">las tecnologias del futuro</h3>
       </header>
+
+      <main className="flex"  >
+
+      </main>
     </section>
   )
 }
