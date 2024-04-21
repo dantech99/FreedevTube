@@ -4,7 +4,7 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 import Card from "@/components/creators/Card";
 import Header from "@/components/creators/Header";
 
-export default async function Page() {
+export default async function Creators() {
     const supabase = createServerComponentClient({cookies})
     const {data: {session}} = await supabase.auth.getSession()
 

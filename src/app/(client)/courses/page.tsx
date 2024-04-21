@@ -4,10 +4,7 @@ import {createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 
 export default async function Courses() {
 
-  interface cursosProps {
-    data: any
-    error: any
-  }
+
   const supabase = createServerComponentClient({cookies})
   const {data: {session}} = await supabase.auth.getSession()
 
