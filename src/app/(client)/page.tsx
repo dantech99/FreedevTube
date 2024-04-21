@@ -1,5 +1,6 @@
 import DiscoverPage from '@/components/home/discover';
 import JumbotronSection from '@/components/home/jumbrotron';
+
 import { AuthButtonServer } from '@/components/navbar/auth-button-server';
 
 import ResourceCard from '@/components/home/cardSources';
@@ -10,11 +11,11 @@ export default function Home() {
     <>
       <AuthButtonServer />
       {/* jumbrotron */}
-
       <JumbotronSection />
       <DiscoverPage />
       <Tecnology />
       <ResourceCard />
+      {/* <AuthButtonServer /> */}
     </>
   );
 }

@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --background-primary: linear-gradient(180deg, rgba(32,21,58,1) 5%, rgba(4,1,13,1) 30%);
+  --background-primary: linear-gradient(180deg, rgb(20, 11, 46) 5%, rgba(4,1,13,1) 30%);
 }
 
 @media (prefers-color-scheme: dark) {
