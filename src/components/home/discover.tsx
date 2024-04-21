@@ -46,7 +46,7 @@ export default function DiscoverPage() {
                 </div>
 
                 <div>
-                  <Button title="Descubrir" />
+                  <Button title="Descubrir" path="/creators" />
                   
                 </div>
               </div>
@@ -80,7 +80,7 @@ export default function DiscoverPage() {
                 </div>
 
                 <div className="flex justify-end">
-                <Button title="Explorar" />
+                <Button title="Explorar" path="/courses" />
                 </div>
               </div>
             </>

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { AuthButton } from "../home/auth-button-client";
+
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -94,11 +94,11 @@ function Navbar() {
                 </div>
                 {/* <button
                   className="hidden md:block w-40 h-10 gap-0 focus:outline-none text-black bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 transition duration-150 ease-in"
-                  onClick={handleAuthAction}
-                  >
                   
-                </button> */}
-                <AuthButton session={null} />
+                  >
+                  <a href="/login-github"> Iniciar session</a> 
+                </button>
+                */}
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ function Navbar() {
                 </Disclosure.Button>
               ))}
             <div>
-            <AuthButton session={null} />
+            {/* <AuthButtonServer  /> */}
             </div>
             </div>
           </Disclosure.Panel>

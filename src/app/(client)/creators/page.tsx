@@ -1,9 +1,14 @@
-'use client'
+import { redirect } from "next/navigation"
+import { cookies } from "next/headers"
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 
-// pages/creators.tsx
+export default async function CreatorsPage  ()  {
+  const supabase = createServerComponentClient({cookies})
+  const {data: {session}} = await supabase.auth.getSession()
 
-
-export default function CreatorsPage  ()  {
+  if(session === null) {
+    redirect('/login')
+  }
   return (
     <div>
       <h1>Contenido para creadores</h1>
