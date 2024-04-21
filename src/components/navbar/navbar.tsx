@@ -94,11 +94,11 @@ function Navbar() {
                 </div>
                 {/* <button
                   className="hidden md:block w-40 h-10 gap-0 focus:outline-none text-black bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 transition duration-150 ease-in"
-                  onClick={handleAuthAction}
-                  >
                   
-                </button> */}
-                {/* <AuthButtonServer /> */}
+                  >
+                  <a href="/login-github"> Iniciar session</a> 
+                </button>
+                */}
               </div>
             </div>
           </div>
