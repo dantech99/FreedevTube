@@ -1,12 +1,13 @@
 interface buttonProps {
   children?: React.ReactNode;
-  title?: string
+  title?: string;
+  path?: string
 }
 
-export default function Button({children, title}: buttonProps) {
+export default function Button({children, title, path}: buttonProps) {
   return (
     <a
-      href="#"
+      href={path}
       className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-black rounded-lg bg-yellow-500 hover:bg-yellow-400 focus:ring-4 focus:ring-blue-300">
         {title}
       <svg
