@@ -16,12 +16,11 @@ export default async function Card() {
           <div
             className="max-w-[404px] w-auto bg-[#13203E] flex flex-col justify-center items-center mx-auto p-4 "
             key={creador.id}>
-            <Image
+            <img
               className="rounded-full aspect-square h-[226px] mb-6"
               src={creador.url_imagen}
               alt={creador.nombre}
-              width={200}
-              height={200}
+              
             />
             <p className="font-extrabold text-yellow-500 text-xxl mb-6">{creador.nombre}</p>
             <p className=" text-sm px-4 mb-6">{creador.descripcion}</p>
