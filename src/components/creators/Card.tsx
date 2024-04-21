@@ -1,7 +1,9 @@
+
 import { redirect } from "next/navigation"
 import { cookies } from "next/headers"
 import {createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 import Image from "next/image"
+
 
 export default async function Card() {
 
@@ -13,8 +15,7 @@ export default async function Card() {
         {creadores?.map((creador) => (
           <div
             className="max-w-[404px] w-auto bg-[#13203E] flex flex-col justify-center items-center mx-auto p-4 "
-            key={creador.id}
-          >
+            key={creador.id}>
             <Image
               className="rounded-full aspect-square h-[226px] mb-6"
               src={creador.url_imagen}
@@ -26,10 +27,12 @@ export default async function Card() {
             <p className=" text-sm px-4 mb-6">{creador.descripcion}</p>
 
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 p-4 w-full">
+
               <a href={creador.url_apoyar} className="bg-yellow-500 hover:bg-yellow-400 text-black text-md rounded-full px-2 m-1 py-1 text-center" target="_blank">
                 Apoyar
               </a>
               <button className="bg-yellow-500 hover:bg-yellow-400 text-black text-md rounded-full px-2 m-1 py-1 text-center">
+
                 Saber Más
               </button>
             </div>

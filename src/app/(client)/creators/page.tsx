@@ -12,9 +12,11 @@ export default async function Creators() {
       redirect('/login')
     }
     return(
-        <>
+        
+        <section className="">
             <Header />
             <Card />
-        </>
+        </section>
+        
     )
 }
