@@ -12,6 +12,99 @@ export default function Carrousel() {
   const carrouselItems: carrouselProps[] = [
     {
       alt: 'slider',
+      image: '/melenitas.dev.png'
+    },
+    {
+      alt: 'slider',
+      image: '/todocode.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/afor_digital.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/noelia.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/moure.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/s4vitar.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/afor_digital.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/noelia.dev.jpg'
+    },
+    
+    {
+      alt: 'slider',
+      image: '/moure.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/s4vitar.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/afor_digital.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/noelia.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/moure.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/s4vitar.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/midudev.jpeg'
+    },
+    {
+      alt: 'slider',
+      image: '/afor_digital.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/noelia.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/moure.dev.jpg'
+    },
+    {
+      alt: 'slider',
+      image: '/s4vitar.dev.jpg'
+    },
+
+
+
+
+
+
+
+
+    {
+      alt: 'slider',
       image: '/midudev.jpeg'
     },
     {
@@ -64,51 +157,11 @@ export default function Carrousel() {
     },
     {
       alt: 'slider',
-      image: '/moure.dev.jpg'
+      image: '/melenitas.dev.png'
     },
     {
       alt: 'slider',
-      image: '/s4vitar.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/midudev.jpeg'
-    },
-    {
-      alt: 'slider',
-      image: '/afor_digital.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/noelia.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/moure.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/s4vitar.dev.jpg'
-    },
-
-
-
-
-
-
-
-
-    {
-      alt: 'slider',
-      image: '/midudev.jpeg'
-    },
-    {
-      alt: 'slider',
-      image: '/afor_digital.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/noelia.dev.jpg'
+      image: '/todocode.dev.jpg'
     },
     {
       alt: 'slider',
@@ -138,50 +191,6 @@ export default function Carrousel() {
       alt: 'slider',
       image: '/s4vitar.dev.jpg'
     },
-    {
-      alt: 'slider',
-      image: '/midudev.jpeg'
-    },
-    {
-      alt: 'slider',
-      image: '/afor_digital.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/noelia.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/moure.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/s4vitar.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/midudev.jpeg'
-    },
-    {
-      alt: 'slider',
-      image: '/afor_digital.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/noelia.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/moure.dev.jpg'
-    },
-    {
-      alt: 'slider',
-      image: '/s4vitar.dev.jpg'
-    },
-
-
-
- 
   
   ]
 

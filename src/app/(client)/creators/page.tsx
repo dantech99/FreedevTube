@@ -12,9 +12,11 @@ export default async function Page() {
       redirect('/login')
     }
     return(
-        <>
+        
+        <section className="">
             <Header />
             <Card />
-        </>
+        </section>
+        
     )
 }
