@@ -3,6 +3,7 @@ import { redirect } from "next/navigation"
 import { cookies } from "next/headers"
 import {createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 import Image from "next/image"
+import Link from "next/link"
 
 
 export default async function Card() {
@@ -10,7 +11,10 @@ export default async function Card() {
   const supabase = createServerComponentClient({cookies})
 
   const {data: creadores} = await supabase.from('creadores').select('*')
-  return (
+
+
+
+return (
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 text-lg md:text-xl lg:text-2xl xl:text-2xl">
 {creadores?.map((creador) => (
   <div
@@ -32,9 +36,12 @@ export default async function Card() {
       <a href={creador.url_apoyar} className="inline-block px-3 py-2 text-sm font-medium text-center text-black bg-yellow-500 rounded-lg hover:bg-yellow-300 focus:ring-4 focus:outline-none focus:ring-blue-300 mr-2">
         Apoyar
       </a>
-      <a href={`/creator/${creador.id}`} className="inline-block px-3 py-2 text-sm font-medium text-center text-black bg-yellow-500 rounded-lg hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-blue-300">
+      <Link href={`/creator/${creador.slug}`} 
+         className="inline-block px-3 py-2 text-sm font-medium text-center text-black bg-yellow-500 rounded-lg hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-blue-300">
         Saber Más
-      </a>
+      
+      </Link>
+    
     </div>
   </div>
 ))}
