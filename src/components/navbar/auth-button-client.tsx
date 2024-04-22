@@ -13,6 +13,7 @@ export function AuthButton ({ session }: { session: Session | null }) {
       options: {
         redirectTo: 'https://freedev.vercel.app/auth/callback'
       }
+      
     })
   }
 
