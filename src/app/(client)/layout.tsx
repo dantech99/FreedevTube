@@ -24,7 +24,6 @@ export default async function RootLayout({
         <div className='bg-gradient '>
         {/* Layout UI */}
 
-        <NextUIProvider>
         {/* navbar  */}
         <div className='border-b border-slate-950'>
 
@@ -38,7 +37,6 @@ export default async function RootLayout({
         
         {/* footer  */}
         <Footer />
-        </NextUIProvider>        
         </div>
 
 
