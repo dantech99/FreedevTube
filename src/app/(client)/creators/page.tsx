@@ -2,7 +2,7 @@ import { redirect } from "next/navigation"
 import { cookies } from "next/headers"
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 import Card from "@/components/creators/Card";
-import Header from "@/components/creators/Header";
+import Header from "@/components/headers/Header";
 
 export default async function Creators() {
     const supabase = createServerComponentClient({cookies})
@@ -13,10 +13,11 @@ export default async function Creators() {
     }
     return(
         
-        <section className="">
-            <Header />
+        <main className="">
+            <Header title="Creadores de Contenido" paragraph="Descubre y encuentra a los mejores creadores de contenido sobre
+            programacion, diseño y cyberseguridad" />
             <Card />
-        </section>
+        </main>
         
     )
 }
