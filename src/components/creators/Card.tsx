@@ -36,7 +36,7 @@ return (
       <a href={creador.url_apoyar} className="inline-block px-3 py-2 text-sm font-medium text-center text-black bg-yellow-500 rounded-lg hover:bg-yellow-300 focus:ring-4 focus:outline-none focus:ring-blue-300 mr-2">
         Apoyar
       </a>
-      <Link href={`/creator/${creador.slug}`} 
+      <Link href={`/creators/${creador.slug}`} 
          className="inline-block px-3 py-2 text-sm font-medium text-center text-black bg-yellow-500 rounded-lg hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-blue-300">
         Saber Más
       
