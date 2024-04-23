@@ -11,7 +11,7 @@ export function AuthButton ({ session }: { session: Session | null }) {
     await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: 'https://freedev.vercel.app/auth/callback'
+        redirectTo: 'https://freedev.vercel.app'
       }
       
     })
