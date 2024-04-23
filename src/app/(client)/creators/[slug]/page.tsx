@@ -1,5 +1,6 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
+import { redirect } from "next/navigation"
 import { cookies } from 'next/headers';
 import Link from 'next/link';
 
@@ -10,6 +11,11 @@ interface CreatorProps {
 
 export default async function Creator({ params }: { params: CreatorProps }) {
   const supabase = createServerComponentClient({ cookies });
+  const {data: {session}} = await supabase.auth.getSession()
+
+  if(session === null) {
+    redirect('/login')
+  }
 
   const { slug } = params;
 
