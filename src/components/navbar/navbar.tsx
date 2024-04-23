@@ -16,6 +16,7 @@ function classNames(...classes: string[]) {
 }
 
 function Navbar() {
+
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
