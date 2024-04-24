@@ -1,14 +1,17 @@
-import {createClient} from "@/lib/supabase/server";
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
-import Navbar from "./navbar";
+import { redirect } from 'next/navigation';
+import { AuthButton } from './auth-button-client';
 
 export async function AuthButtonServer() {
-  const supabase = createClient(cookies());
+  const supabase = createServerComponentClient({ cookies });
   const {
     data: { session },
   } = await supabase.auth.getSession();
 
+  // if(user === null) {
+  //   redirect('/unauthorized')
+  // }
 
-  return <Navbar session={session} />;
-  
+  return <AuthButton session={session} />;
 }

@@ -9,7 +9,7 @@ import Tecnology from '@/components/home/tecnology';
 export default function Home() {
   return (
     <>
-      {/* <AuthButtonServer /> */}
+      <AuthButtonServer />
       {/* jumbrotron */}
       <JumbotronSection />
       <DiscoverPage />
