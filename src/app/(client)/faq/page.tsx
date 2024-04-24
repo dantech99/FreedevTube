@@ -16,6 +16,7 @@ export default function Faq() {
         <FaqItem 
           question="¿Qué es FreeDevTube?"
           answer="FreeDevTube es una plataforma de cursos gratuitos en línea para desarrolladores. Ofrecemos una amplia variedad de cursos sobre diferentes tecnologías y temas relacionados con la programación, todos completamente gratuitos."
+          
         />
         <FaqItem 
           question="¿Cómo puedo acceder a los cursos?"
