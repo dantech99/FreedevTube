@@ -9,12 +9,12 @@ interface RunwayItemProps {
 export default function Runway() {
   const resources = [
     {
-      imgSrc: '/midudev.jpeg',
+      imgSrc: '/learn.png',
       title: 'CURSOS GRATUITOS',
       url: "/courses"
     },
     {
-      imgSrc: '/midudev.jpeg',
+      imgSrc: '/streamer.png',
       title: 'STREAMERS',
       url: '/creators'
     },
@@ -22,7 +22,7 @@ export default function Runway() {
 
   return (
     <div className="lg:p-8 h-auto">
-      <h1 className="text-yellow-300 text-3xl font-bold mb-8 text-center">
+      <h1 className="text-yellow-300 text-3xl font-bold mb-4 text-center">
         ¿Qué quieres descubrir hoy?
       </h1>
 
@@ -37,16 +37,16 @@ export default function Runway() {
 
 function RunwayItem({ imgSrc, title, url }: RunwayItemProps) {
   return (
-    <div className="rounded-lg shadow bg-slate-800 border h-[400px] flex flex-col justify-center items-center">
+    <div className="rounded-lg shadow bg-slate-800 border h-auto md:h-[450px] w-[350px] flex flex-col justify-start items-center">
       {/* contenedor de la imagen */}
-      <div className="w-30 h-30 rounded-t-lg overflow-hidden">
-        <img className="w-full h-full object-cover rounded-full" src={imgSrc} alt='' />
+      <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden mb-4 flex items-center justify-center mt-20">
+        <img className="w-full h-full object-cover" src={imgSrc} alt='' />
       </div>
 
       {/* contenedor del texto */}
       <div className="p-4 text-center">
         <a href={url} rel="noopener noreferrer">
-          <h5 className="text-yellow-300 text-1xl font-bold mb-2 hover:text-yellow-600">{title}</h5>
+          <h5 className="text-yellow-300 text-1xl font-bold mb-4 hover:text-yellow-600">{title}</h5>
         </a>
       </div>
     </div>
