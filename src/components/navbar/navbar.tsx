@@ -101,10 +101,11 @@ function Navbar() {
 
                 {
                   session ? (
-                    <Image
+                    <img
                       src={session?.user?.image ?? ''}
                       alt={session?.user?.name ?? ''}
                       width={50}
+                      height={50}
                     />
                   ) : null
                 }
