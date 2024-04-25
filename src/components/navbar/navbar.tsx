@@ -1,4 +1,4 @@
-'use client';
+"use client"
 import { useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -93,14 +93,16 @@ function Navbar() {
                       </a>
                     ))}
                   </div>
-                  
-                </div >
+                </div>
+              </div>
+
+              <div className="ml-4 flex items-center">
                 {
                   session ? <SignOut /> : <SignInClient />
                 }
                 {
                   session ? (
-                    <div className="ml-4">
+                    <div className="ml-2">
                       <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gray-600">
                         <img
                           src={session?.user?.image ?? ''}
@@ -111,8 +113,6 @@ function Navbar() {
                     </div>
                   ) : null
                 }
-
-                
               </div>
             </div>
           </div>
