@@ -2,7 +2,7 @@ import { redirect } from "next/navigation"
 import Card from "@/components/creators/Card";
 import Header from "@/components/headers/Header";
 
-import Login from "../../../components/home/page";
+import Login from "../../../components/home/login-button-redirect";
 
 import { auth } from '@/auth';
 
