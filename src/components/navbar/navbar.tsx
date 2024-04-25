@@ -1,22 +1,27 @@
-"use client";
-import { useEffect, useState } from "react";
-import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
+'use client';
+import { useEffect, useState } from 'react';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { SignInClient } from '../auth/signin-button-client';
+import { SignOut } from '../auth/signout-button';
+import { useSession } from "next-auth/react"
+import Image from 'next/image';
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "Cursos", href: "/courses", current: false },
-  { name: "Creadores", href: "/creators", current: false },
-  { name: "About", href: "/about", current: false },
-  { name: "Faq", href: "/faq", current: false },
+  { name: 'Home', href: '/', current: true },
+  { name: 'Cursos', href: '/courses', current: false },
+  { name: 'Creadores', href: '/creators', current: false },
+  { name: 'About', href: '/about', current: false },
+  { name: 'Faq', href: '/faq', current: false },
 ];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 function Navbar() {
+
+  const { data: session, status } = useSession()
 
   const [isSticky, setIsSticky] = useState(false);
 
@@ -29,24 +34,21 @@ function Navbar() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-
 
   return (
     <Disclosure
       as="nav"
       className={`bg-gray-900 ${
         isSticky
-          ? "fixed top-0 left-0 w-full bg-opacity-75 backdrop-filter backdrop-blur-lg z-10"
-          : ""
-      }`}
-    >
+          ? 'fixed top-0 left-0 w-full bg-opacity-75 backdrop-filter backdrop-blur-lg z-10'
+          : ''
+      }`}>
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
@@ -82,24 +84,32 @@ function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                            ? 'bg-gray-900 text-white'
+                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'rounded-md px-3 py-2 text-sm font-medium'
                         )}
-                        aria-current={item.current ? "page" : undefined}
-                      >
+                        aria-current={item.current ? 'page' : undefined}>
                         {item.name}
                       </a>
                     ))}
                   </div>
-                </div>
-                {/* <button
-                  className="hidden md:block w-40 h-10 gap-0 focus:outline-none text-black bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 transition duration-150 ease-in"
                   
-                  >
-                  <a href="/login-github"> Iniciar session</a> 
-                </button>
-                */}
+                </div>
+                {
+                  session ? <SignOut /> : <SignInClient />
+                }
+
+                {
+                  session ? (
+                    <Image
+                      src={session?.user?.image ?? ''}
+                      alt={session?.user?.name ?? ''}
+                      width={50}
+                    />
+                  ) : null
+                }
+
+                
               </div>
             </div>
           </div>
@@ -112,18 +122,14 @@ function Navbar() {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
+                      ? 'bg-gray-900 text-white'
+                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'block rounded-md px-3 py-2 text-base font-medium'
                   )}
-                  aria-current={item.current ? "page" : undefined}
-                >
+                  aria-current={item.current ? 'page' : undefined}>
                   {item.name}
                 </Disclosure.Button>
               ))}
-            <div>
-            {/* <AuthButtonServer  /> */}
-            </div>
             </div>
           </Disclosure.Panel>
         </>
