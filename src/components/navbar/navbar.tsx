@@ -97,6 +97,11 @@ function Navbar() {
                 {
                   session ? <SignOut /> : <SignInClient />
                 }
+
+                {
+                  session ? <img src={session?.user?.image} alt={session?.user?.name} width={50} /> : ''
+                }
+
                 
               </div>
             </div>

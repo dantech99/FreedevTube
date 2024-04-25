@@ -7,11 +7,6 @@ export default async function Courses() {
 
 
   const supabase = createServerComponentClient({cookies})
-  const {data: {session}} = await supabase.auth.getSession()
-
-  if(session === null) {
-    redirect('/login')
-  }
 
   const {data: cursos} = await supabase.from('cursos').select('*')
 
