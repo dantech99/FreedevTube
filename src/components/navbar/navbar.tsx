@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { SignInClient } from '../auth/signin-button-client';
 import { SignOut } from '../auth/signout-button';
 import { useSession } from "next-auth/react"
+import Image from 'next/image';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
@@ -99,7 +100,13 @@ function Navbar() {
                 }
 
                 {
-                  session ? <img src={session?.user?.image} alt={session?.user?.name} width={50} /> : ''
+                  session ? (
+                    <Image
+                      src={session?.user?.image ?? ''}
+                      alt={session?.user?.name ?? ''}
+                      width={50}
+                    />
+                  ) : null
                 }
 
                 
