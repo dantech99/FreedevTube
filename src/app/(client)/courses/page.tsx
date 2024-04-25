@@ -4,7 +4,7 @@ import {createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 import Header from "@/components/headers/Header"
 
 import { auth } from '@/auth';
-import Login from "../login/page";
+import Login from "../../../components/home/page";
 
 
 export default async function Courses() {
