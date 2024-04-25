@@ -1,14 +1,7 @@
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
 
-export default async function Tecnology() {
-  const supabase = createServerComponentClient({ cookies });
-
-  const { data: tecnologias } = await supabase.from("tecnologias").select("*");
-
+export default function Tecnology() {
   return (
     <div>
-      {/* {tecnologias?.map((techology) => ( */}
         <section className="max-w-screen-xl px-4 mx-auto h-[450px]">
           <header className="title text-center mb-8">
             <h3 className="text-white text-3xl font-bold ">
@@ -23,7 +16,6 @@ export default async function Tecnology() {
            
           </main>
         </section>
-      {/* ))} */}
     </div>
   );
 }
