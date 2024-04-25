@@ -3,13 +3,24 @@ import { cookies } from "next/headers"
 import {createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 import Header from "@/components/headers/Header"
 
+import { auth } from '@/auth';
+import Login from "../login/page";
+
+
 export default async function Courses() {
 
 
   const supabase = createServerComponentClient({cookies})
-
+  const session = await auth()
   const {data: cursos} = await supabase.from('cursos').select('*')
-
+  if(!session) return <section className="flex h-screen justify-center items-center flex-col gap-5">
+  <div className="w-96 h-96 flex justify-center items-center border flex-col p-4 gap-10">
+    <h1 className="text-2xl text-balance text-center">
+      Para acceder al contenido inicia session primero
+    </h1>
+    <Login />
+  </div>
+  </section>
 
   return (
     <main className="h-auto" role="main">

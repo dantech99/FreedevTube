@@ -5,12 +5,9 @@ import Link from "next/link"
 
 
 export default async function Card() {
-
   const supabase = createServerComponentClient({cookies})
 
   const {data: creadores} = await supabase.from('creadores').select('*')
-
-
 
 return (
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 text-lg md:text-xl lg:text-2xl xl:text-2xl">
@@ -31,7 +28,7 @@ return (
     
 
     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 p-4 w-full">
-      <a href={creador.url_apoyar} className="inline-block px-3 py-2 text-sm font-medium text-center text-black bg-yellow-400 rounded-lg hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-blue-300 mr-2">
+      <a href={creador.url_apoyar}  target="_blank" className="inline-block px-3 py-2 text-sm font-medium text-center text-black bg-yellow-400 rounded-lg hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-blue-300 mr-2">
         Apoyar
       </a>
       <Link href={`/creators/${creador.slug}`} 
