@@ -96,7 +96,7 @@ function Navbar() {
                 </div>
               </div>
 
-              <div className="ml-4 flex items-center">
+              <div className="ml-4 md:flex items-center hidden ">
                 {
                   session ? <SignOut /> : <SignInClient />
                 }
@@ -134,6 +134,24 @@ function Navbar() {
                 </Disclosure.Button>
               ))}
             </div>
+            <div className="ml-4 flex items-center w-full ">
+                {
+                  session ? <SignOut /> : <SignInClient />
+                }
+                {
+                  session ? (
+                    <div className="ml-2">
+                      <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gray-600">
+                        <img
+                          src={session?.user?.image ?? ''}
+                          alt={session?.user?.name ?? ''}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  ) : null
+                }
+              </div>
           </Disclosure.Panel>
         </>
       )}
