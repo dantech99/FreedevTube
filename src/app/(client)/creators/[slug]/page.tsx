@@ -1,7 +1,7 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
-import Login from '../../login/page';
+import Login from '../../../../components/home/page';
 
 import { auth } from '@/auth';
 interface CreatorProps {
