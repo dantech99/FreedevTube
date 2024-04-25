@@ -94,18 +94,21 @@ function Navbar() {
                     ))}
                   </div>
                   
-                </div>
+                </div >
                 {
                   session ? <SignOut /> : <SignInClient />
                 }
-
                 {
                   session ? (
-                    <Image
-                      src={session?.user?.image ?? ''}
-                      alt={session?.user?.name ?? ''}
-                      width={50}
-                    />
+                    <div className="ml-4">
+                      <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gray-600">
+                        <img
+                          src={session?.user?.image ?? ''}
+                          alt={session?.user?.name ?? ''}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
                   ) : null
                 }
 
