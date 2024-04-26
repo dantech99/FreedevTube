@@ -1,4 +1,4 @@
-export default async function Login() {
+export default async function ReturnHome() {
 
   return (
     <button
