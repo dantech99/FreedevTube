@@ -1,13 +1,25 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
+import Login from '../../../../components/home/login-button-redirect';
 
+import { auth } from '@/auth';
 interface CreatorProps {
   params: any;
   slug: string;
 }
 
 export default async function Creator({ params }: { params: CreatorProps }) {
+
+  const session = await auth()
+  if(!session) return <section className="flex h-screen justify-center items-center flex-col gap-5">
+  <div className="w-96 h-96 flex justify-center items-center border flex-col p-4 gap-10">
+    <h1 className="text-2xl text-balance text-center">
+      Para acceder al contenido inicia session primero
+    </h1>
+     <Login />
+  </div>
+  </section>
   const supabase = createServerComponentClient({ cookies });
 
 
