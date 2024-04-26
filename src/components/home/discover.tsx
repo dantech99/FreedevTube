@@ -67,6 +67,7 @@ export default function DiscoverPage() {
                   src="/undraw_Engineering_team.png"
                   alt="mockup"
                 />
+
               </div>
 
               <div className="place-self-end lg:col-span-7 lg:mr-40 lg:mb-10 flex justify-end flex-col ">

@@ -41,6 +41,7 @@ function Navbar() {
     };
   }, []);
 
+
   return (
     <Disclosure
       as="nav"
