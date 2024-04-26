@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 export default function CarrouselDiscordServer() {
   const serverIds = ['id1', 'id2', 'id3']; // reemplace con sus propios IDs de servidor
-  const [servers, setServers] = useState([]);
+  const [servers, setServers] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchServers = async () => {
@@ -26,7 +26,7 @@ export default function CarrouselDiscordServer() {
     <section className="carrousel">
       {servers.map((server, index) => (
         <div key={index}>
-          {server.name} // reemplace con los datos que desea mostrar
+          {server.name}
         </div>
       ))}
     </section>
