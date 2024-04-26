@@ -2,12 +2,14 @@
 
 import { signIn } from "@/auth"
  
-export function SignIn() {
+export function SignInServer() {
+  
+
   return (
     <form
       action={async () => {
         "use server"
-        await signIn("github", { redirectTo: '/' })
+        await signIn("github", { redirectTo: "/"  })
       }}
     >
         <button
