@@ -25,7 +25,7 @@ export default async function Courses() {
         {cursos?.map((curso) => (
                 <article className="border w-full bg-[#13203E] flex flex-col" role="article" key={curso.id}>
                   <header className="imagen h-auto  border">
-                    <img src={curso.url_img} alt="imagen del curo" className="w-full h-auto" style={{maxHeight: "200px"}} />
+                    <img src={curso.url_img} alt="imagen del curo" className="w-full h-auto" style={{maxHeight: "400px"}} />
                   </header>
                   <main className="p-4 flex-1">
                     <a href={`/courses/${curso.slug}`}  className="text-2xl text-yellow-400 hover:text-yellow-600">{curso.titulo}</a>
