@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Icon } from 'next/dist/lib/metadata/types/metadata-types';
 import './globals.css';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
@@ -8,9 +9,9 @@ import { SessionProvider } from 'next-auth/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'FreedevTube',
+  title: 'FreedevTube | Home',
   description:
-    'en esta web podras encontrar los mejores cursos de programacion,hacking y diseño web',
+    'FreedevTube es una plataforma de educación en línea para desarrolladores de software. Encuentra los mejores recursos de aprendizaje en un solo lugar.',
 };
 
 export default async function RootLayout({

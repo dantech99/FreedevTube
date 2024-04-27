@@ -1,9 +1,17 @@
-import React from 'react';
+export const metadata = {
+  title: 'FreedevTube | Preguntas frecuentes',
+  description: 'Encuentra respuestas a las preguntas más frecuentes sobre FreeDevTube',
+  keywords: 'preguntas, respuestas, frecuentes, FreeDevTube'
+
+}
+
+
 
 type FaqItemsProps = {
   question: string
    answer: string
 }
+
 
 export default function Faq() {
   return (

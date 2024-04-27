@@ -6,6 +6,15 @@ import Login from "../../../../components/home/login-button-redirect";
 
 import { auth } from "@/auth";
 import HeaderImage from "@/components/headers/HeaderImage";
+import { redirect } from "next/navigation";
+
+export const meta = {
+  title: "Cursos gratuitos",
+  description:
+    "Encuentra los mejores cursos gratuitos dictados por los mejores creadores de contenido de programación, diseño y ciberseguridad",
+  keywords: "cursos, programación, diseño, ciberseguridad",
+};
+
 
 
 interface CourseProps {
@@ -16,16 +25,8 @@ interface CourseProps {
 export default async function Course({ params }: { params: CourseProps }) {
   const session = await auth();
   if (!session)
-    return (
-      <section className="flex h-screen justify-center items-center flex-col gap-5">
-        <div className="w-96 h-96 flex justify-center items-center border flex-col p-4 gap-10">
-          <h1 className="text-2xl text-balance text-center">
-            Para acceder al contenido inicia session primero
-          </h1>
-          <Login />
-        </div>
-      </section>
-    );
+    return redirect("/login");
+
   const supabase = createServerComponentClient({ cookies });
 
   const { slug } = params;
