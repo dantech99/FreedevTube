@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { cookies } from "next/headers"
-import {createServerComponentClient } from "@supabase/auth-helpers-nextjs"
+import { cookies } from "next/headers";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 
 interface HeaderProps {
   title?: string;
@@ -15,7 +15,7 @@ export default async function HeaderImage({
   image,
   creator,
 }: HeaderProps) {
-  const supabase = createServerComponentClient({cookies})
+  const supabase = createServerComponentClient({ cookies });
 
   const { data: creadores, error } = await supabase
     .from("creadores")
@@ -25,13 +25,14 @@ export default async function HeaderImage({
 
   return (
     // <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 text-lg md:text-xl lg:text-2xl xl:text-2xl">
-    <section className="flex justify-center items-center">
+    <section className="flex justify-center items-center container mx-auto px-4">
       <header className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 text-lg md:text-xl lg:text-2xl xl:text-2xl py-8 mx-auto lg:py-16 ">
-        <div className="flex flex-col gap-4 col-span-2 justify-center ">
-          <h1 className="text-6xl font-extrabold text-yellow-500 col-span-2">
+        <div className="flex flex-col gap-4 col-span-1 md:col-span-2 justify-center ">
+          <h1 className="text-6xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-yellow-500 col-span-2 break-words">
             {title}
           </h1>
-          <p className="text-2xl text-balance ">{paragraph}</p>
+
+          <p className="text-2xl text-balance break-all ">{paragraph}</p>
         </div>
 
         <div>
@@ -41,9 +42,7 @@ export default async function HeaderImage({
               src={creadores.url_imagen}
               alt={creadores.nombre}
             />
-            <p className="font-extrabold text-white text-xxl mb-6">
-              {creator}
-            </p>
+            <p className="font-extrabold text-white text-xxl mb-6">{creator}</p>
             <div className="flex flex-col p-4 w-full">
               <a
                 href={creadores.url_apoyar}
