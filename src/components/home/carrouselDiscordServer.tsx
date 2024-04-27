@@ -18,43 +18,43 @@ export const serverList = [
   },
   {
     id: 2,
-    title: 'Titulo 2',
-    description: 'Descripcion 2',
+    title: 'Midudev',
+    description: 'Aprende y mejora en programcion Javascript',
     cover:
-      'https://cdn-longterm.mee6.xyz/plugins/embeds/images/729672926432985098/9f41df388cbe4546ac47dec59e0da93c3203908917b1693d638c9814203b7a60.png',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJlx2IGNSOFOUcQrMnD9MA2UvL5VIvTncU6ifK0rCWXA&s',
 
-    image: './video-library.png',
-    link: 'https://discord.gg/123456',
+    image: 'https://midu.dev/favicon/apple-touch-icon.png',
+    link: 'https://discord.gg/midudev',
   },
   {
     id: 3,
-    title: 'Titulo 3',
-    description: 'Descripcion 3',
+    title: 'todocode',
+    description: 'Diviertete y aprende progrmacion',
     cover:
-      'https://cdn-longterm.mee6.xyz/plugins/embeds/images/729672926432985098/9f41df388cbe4546ac47dec59e0da93c3203908917b1693d638c9814203b7a60.png',
+      'https://yt3.googleusercontent.com/ytc/AIdro_nw88ih3ViFwF9j9baXqeWOZfI3POnR_KhXpOhJCI0e9w=s900-c-k-c0x00ffffff-no-rj',
 
-    image: './video-library.png',
-    link: 'https://discord.gg/123456',
+    image: 'https://yt3.googleusercontent.com/ytc/AIdro_nw88ih3ViFwF9j9baXqeWOZfI3POnR_KhXpOhJCI0e9w=s900-c-k-c0x00ffffff-no-rj',
+    link: 'https://discord.gg/69jEJ2P4',
   },
   {
     id: 4,
-    title: 'Titulo 4',
-    description: 'Descripcion 4',
+    title: 'S4vitar',
+    description: 'Hacking y un monton de cosas',
     cover:
-      'https://cdn-longterm.mee6.xyz/plugins/embeds/images/729672926432985098/9f41df388cbe4546ac47dec59e0da93c3203908917b1693d638c9814203b7a60.png',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnV199GCpH3a8_Q3O3Q_ub7EvYbqjz_Jgn1P5lSHs3nQ&s',
 
-    image: './video-library.png',
-    link: 'https://discord.gg/123456',
+    image: 'https://media.licdn.com/dms/image/D4E0BAQHOmXsXtkCL1g/company-logo_200_200/0/1681121318410/hack4u_logo?e=2147483647&v=beta&t=i4B3oZz5i50_2LTCsbmMUsYURUZq1DYl0VKzeKm6E7Q',
+    link: 'https://discord.gg/Thb6bVbH',
   },
   {
     id: 5,
-    title: 'Titulo 5',
-    description: 'Descripcion 5',
+    title: 'Vamos a codear',
+    description: 'Directos divertidos mientras aprende',
     cover:
-      'https://cdn-longterm.mee6.xyz/plugins/embeds/images/729672926432985098/9f41df388cbe4546ac47dec59e0da93c3203908917b1693d638c9814203b7a60.png',
+      'https://i.blogs.es/4223f8/discord/1366_2000.jpg',
 
-    image: './video-library.png',
-    link: 'https://discord.gg/123456',
+    image: './noelia.dev.jpg',
+    link: 'https://discord.gg/Zcjevtj5',
   },
 ];
 
