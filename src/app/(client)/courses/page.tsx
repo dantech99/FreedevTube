@@ -81,7 +81,7 @@ export default async function Courses() {
                 />
               </div>
 
-              <h3 className="text-sm flex-1">creador por: {curso.creador}</h3>
+              <h3 className="text-sm flex-1">creado por: {curso.creador}</h3>
             </footer>
           </article>
         ))}
