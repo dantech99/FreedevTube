@@ -33,7 +33,7 @@ export default function ResourceCard() {
   ];
 
   return (
-    <div className="lg:p-8 h-auto">
+    <section className="lg:p-8 h-auto">
       <h1 className="text-white text-3xl font-bold mb-8 text-center">
         Descubre recursos indispensables
       </h1>
@@ -45,7 +45,7 @@ export default function ResourceCard() {
         ))}
       </div>
 
-    </div>
+    </section>
   );
 }
 

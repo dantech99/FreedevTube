@@ -3,17 +3,18 @@ import JumbotronSection from '@/components/home/jumbrotron';
 
 import ResourceCard from '@/components/home/cardSources';
 import Tecnology from '@/components/home/tecnology';
+import CarrouselDiscordServer from '@/components/home/carrouselDiscordServer';
 
 export default async function Home() {
-
   return (
     <>
-      {/* jumbrotron */}
+      
       <JumbotronSection />
       <DiscoverPage />
       <Tecnology />
       <ResourceCard />
-      {/* <AuthButtonServer /> */}
+      <CarrouselDiscordServer />
+    
     </>
   );
 }
