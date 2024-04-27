@@ -6,6 +6,10 @@ import YouTube from '../icons-redes/youtube';
 import Instagram from '../icons-redes/instagram';
 import Twitter from '../icons-redes/twitter';
 import TikTok from '../icons-redes/tiktok';
+import Discord from '../icons-redes/discord';
+import Github from '../icons-redes/github';
+import Twitch from '../icons-redes/twitch';
+import Web from '../icons-redes/web';
 
 import { auth } from '@/auth';
 import { redirect } from 'next/navigation';
@@ -95,6 +99,103 @@ export default async function Creator({ params }: { params: CreatorProps }) {
                   className="cursor-pointer">
                   <div className="w-20 bg-gray-700 rounded-full h-20 overflow-hidden flex justify-center ">
                     <YouTube className="w-10 h-full" />
+                  </div>
+                </a>
+              </div>
+            ) : null}
+            {creador.twitter ? (
+              <div className="flex flex-row gap-4 mt-4">
+                <a
+                  href={creador?.twitter}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cursor-pointer">
+                  <div className="w-20 bg-gray-700 rounded-full h-20 overflow-hidden flex justify-center ">
+                    <Twitter className="w-10 h-full" />
+                  </div>
+                </a>
+              </div>
+            ) : null}
+
+            {creador.instagram ? (
+              <div className="flex flex-row gap-4 mt-4">
+                <a
+                  href={creador?.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cursor-pointer">
+                  <div className="w-20 bg-gray-700 rounded-full h-20 overflow-hidden flex justify-center ">
+                    <Instagram className="w-10 h-full" />
+                  </div>
+                </a>
+              </div>
+            ) : null}
+
+            {creador.tiktok ? (
+              <div className="flex flex-row gap-4 mt-4">
+                <a
+                  href={creador?.tiktok}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cursor-pointer">
+                  <div className="w-20 bg-gray-700 rounded-full h-20 overflow-hidden flex justify-center ">
+                    <TikTok className="w-10 h-full" />
+                  </div>
+                </a>
+              </div>
+            ) : null}
+
+            {creador.discord ? (
+              <div className="flex flex-row gap-4 mt-4">
+                <a
+                  href={creador?.discord}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cursor-pointer">
+                  <div className="w-20 bg-gray-700 rounded-full h-20 overflow-hidden flex justify-center ">
+                    <Discord className="w-10 h-full" />
+                  </div>
+                </a>
+              </div>
+            ) : null}
+
+            {creador.github ? (
+              <div className="flex flex-row gap-4 mt-4">
+                <a
+                  href={creador?.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cursor-pointer">
+                  <div className="w-20 bg-gray-700 rounded-full h-20 overflow-hidden flex justify-center ">
+                    <Github className="w-10 h-full" />
+                  </div>
+                </a>
+              </div>
+            ) : null}
+
+            {creador.twitch ? (
+              <div className="flex flex-row gap-4 mt-4">
+                <a
+                  href={creador?.twitch}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cursor-pointer">
+                  <div className="w-20 bg-gray-700 rounded-full h-20 overflow-hidden flex justify-center ">
+                    <Twitch className="w-10 h-full" />
+                  </div>
+                </a>
+              </div>
+            ) : null}
+
+            {creador.web ? (
+              <div className="flex flex-row gap-4 mt-4">
+                <a
+                  href={creador?.web}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cursor-pointer">
+                  <div className="w-20 bg-gray-700 rounded-full h-20 overflow-hidden flex justify-center ">
+                    <Web className="w-10 h-full" />
                   </div>
                 </a>
               </div>
