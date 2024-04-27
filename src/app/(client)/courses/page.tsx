@@ -62,7 +62,7 @@ export default async function Courses() {
                       <img src={curso.img_creador} alt={curso.titulo} className="w-full h-full object-cover" />
                     </div>
                    
-                       <h3 className="text-sm flex-1">creador por: {curso.creador}</h3>
+                       <h3 className="text-sm flex-1">creado por: {curso.creador}</h3>
                    
                   </footer>
       
