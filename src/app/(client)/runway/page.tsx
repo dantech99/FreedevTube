@@ -29,13 +29,13 @@ export default function Runway() {
   ];
 
   return (
-    <div className="lg:p-8 h-auto">
+    <div className="container mx-auto px-4 h-auto flex flex-col justify-center content-center ">
       <h1 className="text-yellow-300 text-3xl font-bold mb-4 text-center">
         ¿Qué quieres descubrir hoy?
       </h1>
 
-      <div className="flex justify-center items-center gap-5 h-screen">
-        {resources.map((resource, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-center justify-center content-center  justify-items-center gap-5 h-screen">
+        {resources.map((resource, index) => ( 
           <RunwayItem key={index} {...resource} />
         ))}
       </div>
