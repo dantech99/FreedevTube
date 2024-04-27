@@ -1,4 +1,6 @@
-export const metadata = {
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
   title: 'FreedevTube | Preguntas frecuentes',
   description: 'Encuentra respuestas a las preguntas más frecuentes sobre FreeDevTube',
   keywords: 'preguntas, respuestas, frecuentes, FreeDevTube'

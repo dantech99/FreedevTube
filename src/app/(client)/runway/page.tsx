@@ -1,5 +1,6 @@
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Runway | FreeDevTube',
   description: 'Descubre los cursos gratuitos y streamers más populares de FreeDevTube',
   keywords: 'cursos, streamers, gratis, FreeDevTube'

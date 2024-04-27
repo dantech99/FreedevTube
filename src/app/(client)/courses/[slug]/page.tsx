@@ -2,13 +2,13 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 
-import Login from "../../../../components/home/login-button-redirect";
+import type { Metadata } from 'next';
 
 import { auth } from "@/auth";
 import HeaderImage from "@/components/headers/HeaderImage";
 import { redirect } from "next/navigation";
 
-export const meta = {
+export const metadata: Metadata = {
   title: "Cursos gratuitos",
   description:
     "Encuentra los mejores cursos gratuitos dictados por los mejores creadores de contenido de programación, diseño y ciberseguridad",

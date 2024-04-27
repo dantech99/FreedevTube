@@ -2,10 +2,10 @@ import { redirect } from 'next/navigation';
 import { cookies } from 'next/headers';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import Header from '@/components/headers/Header';
-
+import type { Metadata } from 'next';
 import { auth } from '@/auth';
 
-export const meta = {
+export const metadata: Metadata = {
   title: 'FreedevTube | Cursos gratuitos',
   description:
     'Encuentra los mejores cursos gratuitos dictados por los mejores creadores de contenido de programación, diseño y ciberseguridad',

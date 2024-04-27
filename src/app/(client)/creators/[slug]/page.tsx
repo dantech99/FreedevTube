@@ -1,5 +1,6 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
+import type { Metadata } from 'next';
 
 import LinkedIn from '../icons-redes/linkedin';
 import YouTube from '../icons-redes/youtube';
@@ -19,7 +20,7 @@ interface CreatorProps {
   slug: string;
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'FreedevTube | Creador',
   description: 'Conoce a los creadores de contenido de FreedevTube',
 };

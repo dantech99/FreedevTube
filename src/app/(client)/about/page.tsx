@@ -1,6 +1,7 @@
-import React from 'react';
+import type { Metadata } from 'next';
 
-export const metadata = {
+
+export const metadata: Metadata = {
     title: 'FreedevTube | Desarrolladores',
     description: 'Conoce a los desarrolladores de FreedevTube',
  }
