@@ -1,3 +1,4 @@
+
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 
@@ -5,6 +6,7 @@ import Login from "../../../../components/home/login-button-redirect";
 
 import { auth } from "@/auth";
 import HeaderImage from "@/components/headers/HeaderImage";
+
 
 interface CourseProps {
   params: any;
@@ -47,7 +49,26 @@ export default async function Course({ params }: { params: CourseProps }) {
     /(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/watch\?.+&v=))([^&\n?#]+)/
   )?.[1];
 
+  // const supabase = createServerComponentClient({ cookies });
+
+
+  // const { slug } = params;
+
+  // const { data: cursos, error } = await supabase
+  //   .from('cursos')
+  //   .select('*')
+  //   .eq('slug', slug)
+  //   .single();
+
+  // if (!cursos) {
+  //   return {
+  //     status: 404,
+  //     content: <div>El curso no fue encontrado</div>,
+  //   };
+  // }
+
   return (
+
     <main className="container mx-auto px-4">
       <HeaderImage
         title={titulo}
@@ -65,3 +86,4 @@ export default async function Course({ params }: { params: CourseProps }) {
     </main>
   );
 }
+
