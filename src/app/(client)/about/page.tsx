@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+    title: 'FreedevTube | Desarrolladores',
+    description: 'Conoce a los desarrolladores de FreedevTube',
+ }
+
 const About = () => {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center">

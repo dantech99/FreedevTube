@@ -1,4 +1,11 @@
-import React from 'react';
+
+export const metadata = {
+  title: 'Runway | FreeDevTube',
+  description: 'Descubre los cursos gratuitos y streamers más populares de FreeDevTube',
+  keywords: 'cursos, streamers, gratis, FreeDevTube'
+
+}
+
 
 interface RunwayItemProps {
   imgSrc: string;

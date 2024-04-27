@@ -19,6 +19,11 @@ interface CreatorProps {
   slug: string;
 }
 
+export const metadata = {
+  title: 'FreedevTube | Creador',
+  description: 'Conoce a los creadores de contenido de FreedevTube',
+};
+
 export default async function Creator({ params }: { params: CreatorProps }) {
   const session = await auth();
   if (!session) {
