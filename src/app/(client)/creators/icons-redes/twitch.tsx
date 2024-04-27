@@ -1,5 +1,6 @@
 
 import type { SVGProps } from 'react';
+
 const Twitch = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -7,9 +8,6 @@ const Twitch = (props: SVGProps<SVGSVGElement>) => (
     id="Layer_1"
     x={0}
     y={0}
-    style={{
-      enableBackground: 'new 0 0 2400 2800',
-    }}
     viewBox="0 0 2400 2800"
     width="1em"
     height="1em"
