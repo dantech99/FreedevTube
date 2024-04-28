@@ -79,7 +79,6 @@ Este proyecto es una plataforma educativa que proporciona acceso a cursos en lí
 
 ![image](https://github.com/dantech99/FreedevTube/assets/82607496/ce6b0610-a349-48d2-8bf9-a9228c5feec8)
 
-[![Captura de pantalla de FreedevTube - Perfil de usuario](/public/readme.png)](https://www.webmobilefirst.com/en/screencasts/80RNNl5lDw/)
 
 ## Contribuyendo
 
