@@ -5,7 +5,8 @@
 
 FreedevTube es una aplicación para aprender y mejorar habilidades en programación, hacking, diseño web y más, a través de una variedad de cursos y recursos educativos.
 
-![Captura de pantalla de FreedevTube](/public/readme.png)
+![image](https://github.com/dantech99/FreedevTube/assets/82607496/bb218773-32a4-43c9-8751-db19d54ae76d)
+
 
 ## Descripción del Proyecto
 
@@ -76,8 +77,8 @@ Este proyecto es una plataforma educativa que proporciona acceso a cursos en lí
 
 ## Capturas de Pantalla
 
-![Captura de pantalla de FreedevTube Mobile](/public/readmeMobile.png)
-![Captura de pantalla de FreedevTube - Perfil de usuario](/public/readme.png)
+![image](https://github.com/dantech99/FreedevTube/assets/82607496/3522d5b7-c6c8-494c-9050-e1cdffc9e3c6)
+[![Captura de pantalla de FreedevTube - Perfil de usuario](/public/readme.png)](https://www.webmobilefirst.com/en/screencasts/80RNNl5lDw/)
 
 ## Contribuyendo
 
