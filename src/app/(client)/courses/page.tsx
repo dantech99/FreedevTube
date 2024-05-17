@@ -50,7 +50,7 @@ export default async function Courses() {
                 className="text-2xl text-yellow-400 hover:text-yellow-600">
                 {curso.titulo}
               </a>
-              <p>{curso.contenido}</p>
+              <p>{curso.descripcion}</p>
               <div className="tags flex mt-4 gap-2 text-xs">
                 <div className="flex gap-2">
                   {curso.tecnologia1 ? (
