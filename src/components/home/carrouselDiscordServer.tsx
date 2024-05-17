@@ -29,7 +29,7 @@ export const serverList = [
   {
     id: 3,
     title: 'todocode',
-    description: 'Diviertete y aprende progrmacion',
+    description: 'Diviertete y aprende programacion',
     cover:
       'https://yt3.googleusercontent.com/ytc/AIdro_nw88ih3ViFwF9j9baXqeWOZfI3POnR_KhXpOhJCI0e9w=s900-c-k-c0x00ffffff-no-rj',
 
@@ -107,7 +107,7 @@ export default function CarrouselDiscordServer({ servers = serverList }) {
                 <a
                   href={server.link}
                   target="_blank"
-                  className="bg-[#FCE307] text-black p-2 w-28 h-10 text-center rounded-3xl">
+                  className="bg-[#FCE307] text-black p-2 w-28 h-10 text-center rounded-xl">
                   Unirte
                 </a>
               </footer>
