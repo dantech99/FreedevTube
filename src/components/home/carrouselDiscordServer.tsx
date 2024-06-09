@@ -81,12 +81,13 @@ export default function CarrouselDiscordServer({ servers = serverList }) {
       <div className="overflow-hidden h-[400px]" ref={emblaRef}>
         <div className={styles.embla_container}>
           {servers.map((server) => (
-            <div className={styles.embla__slide} key={server.id}>
-              <header className="h-1/2 w-full bg-[#13203E]">
+            // <div className={styles.embla__slide} key={server.id}>
+            <div className="rounded-lg border shadow h-[400px] " key={server.id}>
+              <header className="h-1/2 w-full ">
                 <img
                   src={server.cover}
                   alt=""
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover rounded-lg"
                 />
               </header>
               <main className="h-1/5 w-full flex items-center gap-5 p-2">
