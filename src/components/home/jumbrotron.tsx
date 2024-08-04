@@ -12,7 +12,7 @@ export default function JumbotronSection() {
         </h1>
 
         <h3 className="mt-4 text-2xl">
-          Descubre, aprende y apoya, todo en un solo lugar Ya sea que estes
+          Descubre, aprende y apoya, todo en un solo lugar Ya sea que estexttes
           empezando o llevas tiempo este sitio es para ti
         </h3>
 
