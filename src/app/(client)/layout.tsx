@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'FreedevTube | Home',
   description:
     'FreedevTube es una plataforma de educación en línea para desarrolladores de software. Encuentra los mejores recursos de aprendizaje en un solo lugar.',
+    icons: {
+      icon: '/favicon.ico?v=4',
+    },
 };
 
 export default async function RootLayout({
